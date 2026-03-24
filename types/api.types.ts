@@ -11,17 +11,17 @@ export interface RegisterRequest {
 }
 
 export interface AddBooksRequest {
-  userID: string;
+  userId: string;
   collectionOfIsbns: CollectionOfIsbn[];
 }
 
 export interface DeleteBookRequest {
   isbn: string;
-  userID: string;
+  userId: string;
 }
 
 export interface ReplaceIsbnRequest {
-  userID: string;
+  userId: string;
   isbn: string;
 }
 
@@ -47,14 +47,14 @@ export interface RegisterResponse {
 
 // POST /User response
 export interface RegisterResponse {
-  userID: string; // ← D hoa
+  userID: string; // ← D Capital
   username: string;
   books: Book[];
 }
 
 // GET /User response
 export interface GetUserResponse {
-  userId: string; // ← d thường
+  userId: string; // ← d normal
   username: string;
   books: Book[];
 }

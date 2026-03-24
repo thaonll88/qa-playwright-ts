@@ -3,7 +3,8 @@ dotenv.config();
 
 export const TEST_ACCOUNT = {
   userName: process.env.TEST_USERNAME || "",
-  password: process.env.TEST_PASSWORD || "", // Account used for test login
+  password: process.env.TEST_PASSWORD || "",
+  userID: process.env.TEST_USER_ID || "", // Account used for test login
 };
 
 export function generateUser() {
