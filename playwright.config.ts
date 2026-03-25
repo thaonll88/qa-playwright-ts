@@ -13,7 +13,11 @@ export default defineConfig({
     trace: "on-first-retry",
   },
 
-  reporter: [["html", { outputFolder: "playwright-report" }], ["list"]],
+  reporter: [
+    ["html", { outputFolder: "playwright-report" }],
+    ["list"],
+    ["allure-playwright", { outputFolder: "allure-results" }],
+  ],
 
   projects: [
     // UI tests
