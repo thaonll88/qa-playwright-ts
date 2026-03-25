@@ -3,7 +3,10 @@
 node_modules/
 /test-results/
 /playwright-report/
+/allure-results/
+/allure-report/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
-.envallure-results
+.env
+
