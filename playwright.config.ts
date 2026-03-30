@@ -32,18 +32,6 @@ export default defineConfig({
         trace: "on-first-retry",
       },
     },
-    // UI tests - Firefox
-    {
-      name: "firefox",
-      testMatch: "**/ui/**/*.spec.ts",
-      use: {
-        ...devices["Desktop Firefox"],
-        baseURL: "https://demoqa.com",
-        screenshot: "only-on-failure",
-        video: "retain-on-failure",
-        trace: "on-first-retry",
-      },
-    },
     // API tests
     {
       name: "api",
