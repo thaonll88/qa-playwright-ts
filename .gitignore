@@ -11,3 +11,4 @@ node_modules/
 .env
 .claude/
 
+k6/.env.k6
