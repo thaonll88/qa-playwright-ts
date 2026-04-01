@@ -153,7 +153,7 @@ test.describe("Login UI", () => {
     // Add book to collection
     await page.getByText("Add To Your Collection").click();
 
-    // Wait cho dialog xử lý xong
+    // Wait for dialog
     await page.waitForTimeout(1000);
 
     await page.goto("/profile");
