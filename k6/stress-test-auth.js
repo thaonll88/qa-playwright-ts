@@ -1,9 +1,8 @@
 import http from "k6/http";
-import { check } from "k6";
-import { sleep } from "k6";
-import { BASE_URL, AUTH_LOAD_OPTIONS } from "./config.js";
+import { check, sleep } from "k6";
+import { BASE_URL, AUTH_STRESS_OPTIONS } from "./config.js";
 
-export const options = AUTH_LOAD_OPTIONS;
+export const options = AUTH_STRESS_OPTIONS;
 
 export default function () {
   const res = http.post(
@@ -19,5 +18,6 @@ export default function () {
     "status is 200": (r) => r.status === 200,
     "token exists": (r) => JSON.parse(r.body).token !== null,
   });
-  sleep(1); // rest 1 second between each iteration
+
+  sleep(1);
 }
